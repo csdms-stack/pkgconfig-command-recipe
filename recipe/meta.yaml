@@ -1,0 +1,26 @@
+{% set name = "pkgconfig-command" %}
+{% set version = "0.28" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: pkg-config-0.28.tar.gz
+  url: http://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz
+  sha256: 6b6eb31c6ec4421174578652c7e141fdaae2dabad1021f420d8713206ac1f845
+
+requirements:
+  build:
+    - glib
+
+  run:
+    - glib
+
+about:
+  home: https://wiki.freedesktop.org/www/Software/pkg-config/
+  summary: "Manage compile and link flags for libraries"
+  license: BSD
+
+build:
+  number: 0
